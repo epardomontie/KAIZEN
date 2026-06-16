@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Kaizen Restaurante: desayunos, antojitos mexicanos, tortas, burritos, hamburguesas, café, bebidas y postres. Menú interactivo, WhatsApp y mapa incrustado." />
+  <meta name="theme-color" content="#f6f0e5" />
+  <title>Kaizen Restaurante</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#inicio" aria-label="Kaizen Restaurante">
+        <span class="brand-mark">K</span>
+        <span class="brand-copy">
+          <strong>Kaizen Restaurante</strong>
+          <small>Cafetería y antojitos</small>
+        </span>
+      </a>
+
+      <nav class="desktop-actions" aria-label="Acciones principales">
+        <a class="action-link" href="https://wa.me/525541179431" target="_blank" rel="noopener">Pedido</a>
+        <a class="action-link" href="#ubicacion">Reservar</a>
+        <button class="icon-button menu-button" id="menuButton" aria-expanded="false" aria-controls="mobileMenu">☰</button>
+      </nav>
+    </div>
+
+    <div class="container mobile-menu" id="mobileMenu">
+      <a href="#categorias">Categorías</a>
+      <a href="#menu">Menú</a>
+      <a href="#destacados">Destacados</a>
+      <a href="#ubicacion">Ubicación</a>
+      <a href="https://wa.me/525541179431" target="_blank" rel="noopener">WhatsApp 55 4117 9431</a>
+    </div>
+  </header>
+
+  <main id="inicio">
+    <section class="hero">
+      <div class="container hero-shell">
+        <div class="hero-copy">
+          <p class="eyebrow">BIENVENIDO A KAIZEN</p>
+          <h1>Sabor que se disfruta en cada bocado</h1>
+          <p class="hero-text">
+            Desayunos, comidas, antojitos, hamburguesas, burritos, bebidas y postres preparados con amor.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-dark" href="#menu">Ver menú digital (QR)</a>
+            <a class="btn btn-outline" href="#menu">Promociones</a>
+          </div>
+          <div class="hero-dots" aria-hidden="true">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+        </div>
+
+        <div class="hero-photo" aria-hidden="true">
+          <img src="https://images.unsplash.com/photo-1513442542250-854d436a73f2?auto=format&fit=crop&w=1200&q=80" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="categorias">
+      <div class="container">
+        <div class="category-grid">
+          <button class="category-card active" data-filter="desayunos">
+            <span class="category-icon">☀️</span>
+            <span class="category-title">Desayunos</span>
+          </button>
+          <button class="category-card" data-filter="antojitos">
+            <span class="category-icon">🌮</span>
+            <span class="category-title">Antojitos Mexicanos</span>
+          </button>
+          <button class="category-card" data-filter="carnes">
+            <span class="category-icon">🍗</span>
+            <span class="category-title">Carnes y Pollo</span>
+          </button>
+          <button class="category-card" data-filter="tortas">
+            <span class="category-icon">🥪</span>
+            <span class="category-title">Tortas y Burritos</span>
+          </button>
+          <button class="category-card" data-filter="hamburguesas">
+            <span class="category-icon">🍔</span>
+            <span class="category-title">Hamburguesas y Snacks</span>
+          </button>
+          <button class="category-card" data-filter="cafeteria">
+            <span class="category-icon">☕</span>
+            <span class="category-title">Cafetería</span>
+          </button>
+          <button class="category-card" data-filter="bebidas">
+            <span class="category-icon">🥤</span>
+            <span class="category-title">Bebidas Frías</span>
+          </button>
+          <button class="category-card" data-filter="postres">
+            <span class="category-icon">🍰</span>
+            <span class="category-title">Postres</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="destacados">
+      <div class="container section-head">
+        <div>
+          <h2>Platillos destacados</h2>
+          <p>Bloques visuales tipo catálogo, optimizados para celular y computadora.</p>
+        </div>
+        <a class="text-link" href="#menu">Ver todo →</a>
+      </div>
+
+      <div class="container featured-grid">
+        <article class="featured-card">
+          <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1200&q=80" alt="Chilaquiles" />
+          <div class="featured-body">
+            <h3>Chilaquiles</h3>
+            <p>Verdes o rojos, con huevo, pollo deshebrado, pechuga o carne asada.</p>
+            <span>Desde $50</span>
+          </div>
+        </article>
+
+        <article class="featured-card">
+          <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=1200&q=80" alt="Hamburguesa" />
+          <div class="featured-body">
+            <h3>Hamburguesas</h3>
+            <p>Clásica, ranch, aztec, doble burger y más.</p>
+            <span>Desde $65</span>
+          </div>
+        </article>
+
+        <article class="featured-card">
+          <img src="https://images.unsplash.com/photo-1502741338009-cac2772e18bc?auto=format&fit=crop&w=1200&q=80" alt="Café" />
+          <div class="featured-body">
+            <h3>Cafecito y algo más</h3>
+            <p>Frappe, smoothies, refrescos, postres y café.</p>
+            <span>Desde $20</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="menu">
+      <div class="container section-head menu-headline">
+        <div>
+          <h2>Menú</h2>
+          <p>Haz clic en una categoría para cambiar el contenido del menú.</p>
+        </div>
+        <div class="menu-tools">
+          <button class="tool-button active" data-filter="all">Ver todo</button>
+          <button class="tool-button" data-filter="desayunos">Desayunos</button>
+          <button class="tool-button" data-filter="antojitos">Antojitos</button>
+          <button class="tool-button" data-filter="tortas">Tortas</button>
+          <button class="tool-button" data-filter="hamburguesas">Hamburguesas</button>
+          <button class="tool-button" data-filter="cafeteria">Cafetería</button>
+          <button class="tool-button" data-filter="bebidas">Bebidas</button>
+          <button class="tool-button" data-filter="postres">Postres</button>
+        </div>
+      </div>
+
+      <div class="container">
+        <div id="menuStatus" class="menu-status">Mostrando: todos los artículos</div>
+        <div id="menuGrid" class="menu-grid"></div>
+      </div>
+    </section>
+
+    <section class="section" id="ubicacion">
+      <div class="container section-head">
+        <div>
+          <h2>Ubicación</h2>
+          <p>Mapa incrustado con acceso directo a Google Maps y WhatsApp.</p>
+        </div>
+        <a class="text-link" href="https://maps.app.goo.gl/FhTKa9u3nLnVqfWK8" target="_blank" rel="noopener">Abrir en Maps →</a>
+      </div>
+
+      <div class="container contact-grid">
+        <div class="map-card">
+          <iframe
+            title="Ubicación de Kaizen Restaurante"
+            src="https://www.google.com/maps?q=Kaizen%20Restaurante&output=embed"
+            loading="lazy"
+            allowfullscreen
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+        <div class="contact-card" id="contacto">
+          <h3>Kaizen Restaurante</h3>
+          <p>WhatsApp: <a href="https://wa.me/525541179431" target="_blank" rel="noopener">55 4117 9431</a></p>
+          <p>Horario: Lunes a Domingo · 09:00 – 17:00</p>
+          <p>Ubicación: <a href="https://maps.app.goo.gl/FhTKa9u3nLnVqfWK8" target="_blank" rel="noopener">Ver ubicación en Google Maps</a></p>
+
+          <div class="contact-buttons">
+            <a class="btn btn-dark" href="https://wa.me/525541179431" target="_blank" rel="noopener">Pedir por WhatsApp</a>
+            <a class="btn btn-outline" href="#menu">Ir al menú</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <a class="floating-whatsapp" href="https://wa.me/525541179431" target="_blank" rel="noopener">WhatsApp</a>
+
+  <script src="script.js"></script>
+</body>
+</html>
