@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Kaizen Restaurante: desayunos, antojitos mexicanos, hamburguesas, tortas, café, bebidas frías y postres. Pide por WhatsApp y revisa el menú completo." />
+  <meta name="theme-color" content="#26402f" />
+  <title>Kaizen Restaurante</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container">
+      <div class="topbar-inner">
+        <a class="brand" href="#inicio" aria-label="Ir al inicio">
+          <div class="logo" aria-hidden="true"><span>K</span></div>
+          <div class="brand-text">
+            <strong>Kaizen Restaurante</strong>
+            <small>Cafetería y antojitos</small>
+          </div>
+        </a>
+
+        <nav class="nav" aria-label="Navegación principal">
+          <a href="#menu">Menú</a>
+          <a href="#destacados">Destacados</a>
+          <a href="#ubicacion">Ubicación</a>
+          <a href="#contacto">Contacto</a>
+        </nav>
+
+        <div class="actions">
+          <a class="btn btn-secondary" href="https://wa.me/525541179431" target="_blank" rel="noopener">WhatsApp</a>
+          <a class="btn btn-accent" href="#menu">Ver menú</a>
+        </div>
+
+        <button class="btn btn-primary menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mobilePanel">☰ Menú</button>
+      </div>
+
+      <div class="mobile-panel" id="mobilePanel">
+        <div class="mobile-nav">
+          <a href="#menu">Menú</a>
+          <a href="#destacados">Destacados</a>
+          <a href="#ubicacion">Ubicación</a>
+          <a href="#contacto">Contacto</a>
+          <a href="https://wa.me/525541179431" target="_blank" rel="noopener">WhatsApp 55 4117 9431</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="inicio">
+    <section class="hero">
+      <div class="container">
+        <div class="hero-card">
+          <div class="hero-content">
+            <div class="eyebrow">Bienvenidos a Kaizen</div>
+            <h1>Cafecito, antojitos y mucho más...</h1>
+            <p>
+              Desayunos al momento, chilaquiles, tortas, burritos, hamburguesas, bebidas frías,
+              postres y café para cualquier hora del día.
+            </p>
+            <div class="hero-cta">
+              <a class="btn btn-primary" href="#menu">Ver menú</a>
+              <a class="btn btn-secondary" href="https://wa.me/525541179431" target="_blank" rel="noopener">Pedir por WhatsApp</a>
+              <a class="btn btn-accent" href="#ubicacion">Ver ubicación</a>
+            </div>
+            <div class="hero-meta">
+              <div class="hero-chip">⏰ Lunes a Domingo · 09:00 - 17:00</div>
+              <div class="hero-chip">📱 55 4117 9431</div>
+              <div class="hero-chip">📍 Kaizen Restaurante</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2 class="section-title">Categorías</h2>
+            <p class="section-sub">Diseñado para verse limpio en celular y amplio en computadora, como en tus referencias.</p>
+          </div>
+          <span class="pill">Menú digital</span>
+        </div>
+
+        <div class="categories">
+          <div class="cat"><div class="icon">🥚</div><strong>Desayunos</strong><span>Chilaquiles y huevos</span></div>
+          <div class="cat"><div class="icon">🌮</div><strong>Antojitos</strong><span>Quesadillas y huaraches</span></div>
+          <div class="cat"><div class="icon">🍔</div><strong>Hamburguesas</strong><span>Clásicas y especiales</span></div>
+          <div class="cat"><div class="icon">🥪</div><strong>Tortas</strong><span>Y burritos</span></div>
+          <div class="cat"><div class="icon">☕</div><strong>Cafetería</strong><span>Café y frapés</span></div>
+          <div class="cat"><div class="icon">🍰</div><strong>Postres</strong><span>Para cerrar bien</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="destacados">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2 class="section-title">Platillos destacados</h2>
+            <p class="section-sub">Un bloque visual tipo catálogo para mostrar lo mejor de la casa.</p>
+          </div>
+          <a class="btn btn-secondary" href="#menu">Ver todo</a>
+        </div>
+
+        <div class="grid-3">
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1513442542250-854d436a73f2?auto=format&fit=crop&w=1200&q=80" alt="Chilaquiles" />
+            <div class="card-body">
+              <h3>Chilaquiles</h3>
+              <p>Verdes o rojos, con huevo, pollo, pechuga o carne asada.</p>
+              <div class="price-row"><span class="price">Desde MXN $50</span><span>⭐</span></div>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=1200&q=80" alt="Hamburguesa" />
+            <div class="card-body">
+              <h3>Hamburguesas</h3>
+              <p>Clásica, ranch, aztec, kai-burger y opciones especiales.</p>
+              <div class="price-row"><span class="price">Desde MXN $65</span><span>⭐</span></div>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1502741338009-cac2772e18bc?auto=format&fit=crop&w=1200&q=80" alt="Café y postres" />
+            <div class="card-body">
+              <h3>Cafecito y algo más</h3>
+              <p>Café, frappes, smoothies, postres y bebidas frías.</p>
+              <div class="price-row"><span class="price">Desde MXN $20</span><span>⭐</span></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="menu">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2 class="section-title">Menú completo</h2>
+            <p class="section-sub">La parte principal del sitio. Está organizada para que en celular se lea fácil y en computadora se vea como catálogo.</p>
+          </div>
+          <span class="pill">Actualizable</span>
+        </div>
+
+        <div class="menu-wrap">
+          <article class="menu-section">
+            <div class="menu-head"><h3>Desayunos</h3><span class="tag">Chilaquiles y huevos</span></div>
+            <div class="menu-list">
+              <div class="menu-item"><div class="meta"><strong>Chilaquiles sencillos</strong><small>Verdes o rojos</small></div><div class="money">MXN $50</div></div>
+              <div class="menu-item"><div class="meta"><strong>Chilaquiles con huevo</strong><small>Verdes o rojos</small></div><div class="money">MXN $60</div></div>
+              <div class="menu-item"><div class="meta"><strong>Chilaquiles con pollo deshebrado</strong><small>Verdes o rojos</small></div><div class="money">MXN $70</div></div>
+              <div class="menu-item"><div class="meta"><strong>Chilaquiles con pechuga asada</strong><small>Verdes o rojos</small></div><div class="money">MXN $70</div></div>
+              <div class="menu-item"><div class="meta"><strong>Chilaquiles con carne asada</strong><small>Verdes o rojos</small></div><div class="money">MXN $70</div></div>
+              <div class="menu-item"><div class="meta"><strong>Molletes sencillos</strong><small>Opcional con carne asada</small></div><div class="money">MXN $60</div></div>
+              <div class="menu-item"><div class="meta"><strong>Molletes con carne asada</strong><small>Con ingrediente adicional $15</small></div><div class="money">MXN $90</div></div>
+              <div class="menu-item"><div class="meta"><strong>Omelette de queso</strong><small>Con ingrediente adicional $15</small></div><div class="money">MXN $50</div></div>
+            </div>
+          </article>
+
+          <article class="menu-section">
+            <div class="menu-head"><h3>Antojitos mexicanos</h3><span class="tag">Tradición al momento</span></div>
+            <div class="menu-list">
+              <div class="menu-item"><div class="meta"><strong>Quesadillas</strong><small>Queso, chicharrón, hongos, picadillo, tinga de pollo, papa con longaniza o huitlacoche</small></div><div class="money">MXN $25</div></div>
+              <div class="menu-item"><div class="meta"><strong>Quesadillas con queso</strong><small>—</small></div><div class="money">MXN $30</div></div>
+              <div class="menu-item"><div class="meta"><strong>Pambazo clásico</strong><small>—</small></div><div class="money">MXN $30</div></div>
+              <div class="menu-item"><div class="meta"><strong>Gordita clásica</strong><small>—</small></div><div class="money">MXN $30</div></div>
+              <div class="menu-item"><div class="meta"><strong>Sope clásico</strong><small>—</small></div><div class="money">MXN $30</div></div>
+              <div class="menu-item"><div class="meta"><strong>Sope con bistec</strong><small>—</small></div><div class="money">MXN $70</div></div>
+              <div class="menu-item"><div class="meta"><strong>Ingrediente adicional</strong><small>Queso, chicharrón, hongos, picadillo, tinga de pollo, papa con longaniza o huitlacoche</small></div><div class="money">MXN $15</div></div>
+            </div>
+          </article>
+
+          <article class="menu-section">
+            <div class="menu-head"><h3>Huaraches</h3><span class="tag">Generosos y sabrosos</span></div>
+            <div class="menu-list">
+              <div class="menu-item"><div class="meta"><strong>Sencillo</strong><small>—</small></div><div class="money">MXN $50</div></div>
+              <div class="menu-item"><div class="meta"><strong>Nopales</strong><small>—</small></div><div class="money">MXN $60</div></div>
+              <div class="menu-item"><div class="meta"><strong>Huevo</strong><small>—</small></div><div class="money">MXN $70</div></div>
+              <div class="menu-item"><div class="meta"><strong>Queso Oaxaca</strong><small>—</small></div><div class="money">MXN $70</div></div>
+              <div class="menu-item"><div class="meta"><strong>Longaniza</strong><small>—</small></div><div class="money">MXN $70</div></div>
+              <div class="menu-item"><div class="meta"><strong>Bistec</strong><small>—</small></div><div class="money">MXN $95</div></div>
+              <div class="menu-item"><div class="meta"><strong>Costilla</strong><small>—</small></div><div class="money">MXN $95</div></div>
+              <div class="menu-item"><div class="meta"><strong>Ingrediente adicional</strong><small>Nopales, longaniza o queso Oaxaca</small></div><div class="money">MXN $20</div></div>
+            </div>
+          </article>
+
+          <article class="menu-section">
+            <div class="menu-head"><h3>Tortas y burritos</h3><span class="tag">Clásicos de la casa</span></div>
+            <div class="menu-list">
+              <div class="menu-item"><div class="meta"><strong>Burrito Igor</strong><small>Jamón, queso Oaxaca y frijol</small></div><div class="money">MXN $50</div></div>
+              <div class="menu-item"><div class="meta"><strong>Burrito Filemón</strong><small>Tocino, queso Oaxaca y frijol</small></div><div class="money">MXN $50</div></div>
+              <div class="menu-item"><div class="meta"><strong>Burrito Politécnico</strong><small>Pechuga, queso Oaxaca y frijol</small></div><div class="money">MXN $80</div></div>
+              <div class="menu-item"><div class="meta"><strong>Burrito Wurst</strong><small>Salchicha, queso Oaxaca y frijol</small></div><div class="money">MXN $50</div></div>
+              <div class="menu-item"><div class="meta"><strong>Burrito Toluqueño</strong><small>Chorizo, queso Oaxaca y frijol</small></div><div class="money">MXN $50</div></div>
+              <div class="menu-item"><div class="meta"><strong>Burrito Platero</strong><small>Bistec, queso Oaxaca y frijol</small></div><div class="money">MXN $70</div></div>
+              <div class="menu-item"><div class="meta"><strong>Burrito Tropical</strong><small>Jamón, piña, queso Oaxaca y frijol</small></div><div class="money">MXN $70</div></div>
+              <div class="menu-item"><div class="meta"><strong>Burrito Donkey</strong><small>Bistec, chorizo, salchicha, queso Oaxaca y frijol</small></div><div class="money">MXN $100</div></div>
+              <div class="divider"></div>
+              <div class="menu-item"><div class="meta"><strong>Torta salchicha</strong><small>Jamón, longaniza, pierna, huevo o tocino</small></div><div class="money">MXN $50</div></div>
+              <div class="menu-item"><div class="meta"><strong>Torta milanesa de res</strong><small>—</small></div><div class="money">MXN $70</div></div>
+              <div class="menu-item"><div class="meta"><strong>Torta pechuga asada</strong><small>—</small></div><div class="money">MXN $80</div></div>
+              <div class="menu-item"><div class="meta"><strong>Torta milanesa de pollo</strong><small>—</small></div><div class="money">MXN $80</div></div>
+            </div>
+          </article>
+
+          <article class="menu-section">
+            <div class="menu-head"><h3>Hamburguesas y snacks</h3><span class="tag">Para antojo rápido</span></div>
+            <div class="menu-list">
+              <div class="menu-item"><div class="meta"><strong>Hamburguesa clásica</strong><small>—</small></div><div class="money">MXN $65</div></div>
+              <div class="menu-item"><div class="meta"><strong>Amai Burger</strong><small>Jamón, piña, Oaxaca y americano</small></div><div class="money">MXN $90</div></div>
+              <div class="menu-item"><div class="meta"><strong>Ranch Burger</strong><small>Longaniza, Oaxaca y americano</small></div><div class="money">MXN $90</div></div>
+              <div class="menu-item"><div class="meta"><strong>Suisu Burger</strong><small>Tocino, Oaxaca y americano</small></div><div class="money">MXN $90</div></div>
+              <div class="menu-item"><div class="meta"><strong>Philadelphia Burger</strong><small>Jamón, Philadelphia y americano</small></div><div class="money">MXN $90</div></div>
+              <div class="menu-item"><div class="meta"><strong>BBQ Kai Burger</strong><small>Tocino, BBQ y americano</small></div><div class="money">MXN $90</div></div>
+              <div class="menu-item"><div class="meta"><strong>Chipocluda Burger</strong><small>Salchicha, Oaxaca, americano y chipotle</small></div><div class="money">MXN $90</div></div>
+              <div class="menu-item"><div class="meta"><strong>Doble Burger</strong><small>Doble carne, Oaxaca y americano</small></div><div class="money">MXN $120</div></div>
+              <div class="menu-item"><div class="meta"><strong>Aztec Burger</strong><small>Huitlacoche, Oaxaca y americano</small></div><div class="money">MXN $90</div></div>
+              <div class="menu-item"><div class="meta"><strong>Tulios Burger</strong><small>Piña, tocino, jamón, Oaxaca y americano</small></div><div class="money">MXN $105</div></div>
+              <div class="menu-item"><div class="meta"><strong>Kai-Burger</strong><small>Salchicha, longaniza, jamón, tocino, Oaxaca y americano</small></div><div class="money">MXN $120</div></div>
+              <div class="divider"></div>
+              <div class="menu-item"><div class="meta"><strong>Hot-Dogs sencillos</strong><small>3 piezas</small></div><div class="money">MXN $60</div></div>
+              <div class="menu-item"><div class="meta"><strong>Hot-Dogs combinados</strong><small>3 piezas con queso Oaxaca o tocino</small></div><div class="money">MXN $80</div></div>
+              <div class="menu-item"><div class="meta"><strong>Hot-Dogs especiales</strong><small>3 piezas con queso Oaxaca y tocino</small></div><div class="money">MXN $90</div></div>
+              <div class="menu-item"><div class="meta"><strong>Hot-Dogs especiales hawaí</strong><small>3 piezas con queso Oaxaca y piña</small></div><div class="money">MXN $90</div></div>
+              <div class="menu-item"><div class="meta"><strong>Sincronizadas sencillas</strong><small>3 piezas acompañadas de ensalada</small></div><div class="money">MXN $60</div></div>
+              <div class="menu-item"><div class="meta"><strong>Pambadillaz</strong><small>3 piezas bañadas en guajillo con ensalada</small></div><div class="money">MXN $70</div></div>
+              <div class="menu-item"><div class="meta"><strong>Papas a la francesa</strong><small>—</small></div><div class="money">MXN $50</div></div>
+            </div>
+          </article>
+
+          <article class="menu-section">
+            <div class="menu-head"><h3>Cafecito y algo más</h3><span class="tag">Bebidas y postres</span></div>
+            <div class="menu-list">
+              <div class="menu-item"><div class="meta"><strong>Smoothies</strong><small>Mango, manzana, naranja, uva, fresa, limón, jamaica, tamarindo, piña o durazno</small></div><div class="money">MXN $50</div></div>
+              <div class="menu-item"><div class="meta"><strong>Porción extra de perlas</strong><small>—</small></div><div class="money">MXN $15</div></div>
+              <div class="menu-item"><div class="meta"><strong>Refresco de lata</strong><small>—</small></div><div class="money">MXN $50</div></div>
+              <div class="menu-item"><div class="meta"><strong>Refresco de vidrio</strong><small>—</small></div><div class="money">MXN $15</div></div>
+              <div class="menu-item"><div class="meta"><strong>Agua del día 1 lt</strong><small>—</small></div><div class="money">MXN $30</div></div>
+              <div class="menu-item"><div class="meta"><strong>Americano</strong><small>—</small></div><div class="money">MXN $25</div></div>
+              <div class="menu-item"><div class="meta"><strong>Cappuccino</strong><small>—</small></div><div class="money">MXN $35</div></div>
+              <div class="menu-item"><div class="meta"><strong>Café con leche</strong><small>—</small></div><div class="money">MXN $35</div></div>
+              <div class="menu-item"><div class="meta"><strong>Latte macciato</strong><small>—</small></div><div class="money">MXN $35</div></div>
+              <div class="menu-item"><div class="meta"><strong>Espresso</strong><small>—</small></div><div class="money">MXN $25</div></div>
+              <div class="menu-item"><div class="meta"><strong>Mocha</strong><small>—</small></div><div class="money">MXN $35</div></div>
+              <div class="menu-item"><div class="meta"><strong>Chocolatl</strong><small>—</small></div><div class="money">MXN $35</div></div>
+              <div class="menu-item"><div class="meta"><strong>Affogatto</strong><small>—</small></div><div class="money">MXN $50</div></div>
+              <div class="menu-item"><div class="meta"><strong>Té</strong><small>Manzanilla, hierbabuena o limón</small></div><div class="money">MXN $20</div></div>
+              <div class="divider"></div>
+              <div class="menu-item"><div class="meta"><strong>Flan napolitano</strong><small>—</small></div><div class="money">MXN $45</div></div>
+              <div class="menu-item"><div class="meta"><strong>Cheesecake de zarzamora</strong><small>—</small></div><div class="money">MXN $45</div></div>
+              <div class="menu-item"><div class="meta"><strong>Cheesecake de chispas</strong><small>—</small></div><div class="money">MXN $45</div></div>
+              <div class="menu-item"><div class="meta"><strong>Pastel de zanahoria</strong><small>—</small></div><div class="money">MXN $45</div></div>
+              <div class="menu-item"><div class="meta"><strong>Pastel Matilda</strong><small>—</small></div><div class="money">MXN $55</div></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="ubicacion">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2 class="section-title">Ubicación</h2>
+            <p class="section-sub">Mapa incrustado y acceso directo a Google Maps. Si luego me compartes la dirección exacta, lo ajusto al punto exacto.</p>
+          </div>
+          <a class="btn btn-secondary" href="https://maps.app.goo.gl/FhTKa9u3nLnVqfWK8" target="_blank" rel="noopener">Abrir en Maps</a>
+        </div>
+
+        <div class="contact-grid">
+          <div class="panel">
+            <iframe
+              class="map"
+              src="https://www.google.com/maps?q=Kaizen%20Restaurante&output=embed"
+              allowfullscreen
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Mapa de Kaizen Restaurante"></iframe>
+          </div>
+
+          <div class="panel panel-pad" id="contacto">
+            <div class="pill">Contacto rápido</div>
+            <h3 style="margin:14px 0 6px; font-size:1.6rem">Kaizen Restaurante</h3>
+            <p class="muted" style="margin:0; line-height:1.6">
+              Pide por WhatsApp, revisa el menú digital o abre la ubicación directamente desde la web.
+            </p>
+
+            <div class="info-list">
+              <div class="info-row">
+                <div class="dot">📱</div>
+                <div>
+                  <strong>WhatsApp</strong>
+                  <a href="https://wa.me/525541179431" target="_blank" rel="noopener">55 4117 9431</a>
+                </div>
+              </div>
+
+              <div class="info-row">
+                <div class="dot">📍</div>
+                <div>
+                  <strong>Ubicación</strong>
+                  <a href="https://maps.app.goo.gl/FhTKa9u3nLnVqfWK8" target="_blank" rel="noopener">Ver ubicación en Google Maps</a>
+                </div>
+              </div>
+
+              <div class="info-row">
+                <div class="dot">⏰</div>
+                <div>
+                  <strong>Horario</strong>
+                  <span>Lunes a Domingo · 09:00 - 17:00</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="stack">
+              <a class="btn btn-primary" href="https://wa.me/525541179431" target="_blank" rel="noopener">Pedir por WhatsApp</a>
+              <a class="btn btn-secondary" href="#menu">Ver menú completo</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-card">
+          <div>
+            <strong style="display:block; color:var(--text)">Kaizen Restaurante</strong>
+            <span>Cafetería · Antojitos mexicanos · Hamburguesas · Tortas · Bebidas</span>
+          </div>
+          <span>Hecho para verse bien en celular y computadora</span>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <a class="whatsapp-float" href="https://wa.me/525541179431" target="_blank" rel="noopener" aria-label="Pedir por WhatsApp">
+    WhatsApp
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
