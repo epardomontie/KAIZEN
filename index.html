@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Kaizen Restaurante: desayunos, antojitos mexicanos, tortas, burritos, hamburguesas, café, bebidas y postres. Menú interactivo, WhatsApp y mapa incrustado." />
-  <meta name="theme-color" content="#f6f0e5" />
+  <meta name="description" content="Kaizen Restaurante: desayunos, antojitos mexicanos, hamburguesas, tortas, cafetería, bebidas frías y postres. Menú digital y WhatsApp." />
+  <meta name="theme-color" content="#263f2f" />
   <title>Kaizen Restaurante</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,194 +13,356 @@
 </head>
 <body>
   <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="#inicio" aria-label="Kaizen Restaurante">
-        <span class="brand-mark">K</span>
-        <span class="brand-copy">
+    <div class="container header-row">
+      <a class="brand" href="#inicio" aria-label="Ir al inicio">
+        <div class="brand-mark">K</div>
+        <div class="brand-copy">
           <strong>Kaizen Restaurante</strong>
-          <small>Cafetería y antojitos</small>
-        </span>
+          <span>Cafetería y antojitos</span>
+        </div>
       </a>
 
-      <nav class="desktop-actions" aria-label="Acciones principales">
-        <a class="action-link" href="https://wa.me/525541179431" target="_blank" rel="noopener">Pedido</a>
-        <a class="action-link" href="#ubicacion">Reservar</a>
-        <button class="icon-button menu-button" id="menuButton" aria-expanded="false" aria-controls="mobileMenu">☰</button>
+      <nav class="desktop-nav" aria-label="Navegación principal">
+        <a href="#categorias">Categorías</a>
+        <a href="#menu">Menú</a>
+        <a href="#destacados">Destacados</a>
+        <a href="#ubicacion">Ubicación</a>
+        <a href="#contacto">Contacto</a>
       </nav>
+
+      <div class="header-actions">
+        <a class="btn btn-ghost" href="https://wa.me/525541179431?text=Hola%20Kaizen%2C%20quiero%20hacer%20un%20pedido" target="_blank" rel="noopener">Pedido</a>
+        <a class="btn btn-solid" href="#ubicacion">Reservar</a>
+        <button class="menu-button" id="menuButton" aria-expanded="false" aria-controls="mobileNav">☰</button>
+      </div>
     </div>
 
-    <div class="container mobile-menu" id="mobileMenu">
+    <div class="container mobile-nav" id="mobileNav">
       <a href="#categorias">Categorías</a>
       <a href="#menu">Menú</a>
       <a href="#destacados">Destacados</a>
       <a href="#ubicacion">Ubicación</a>
-      <a href="https://wa.me/525541179431" target="_blank" rel="noopener">WhatsApp 55 4117 9431</a>
+      <a href="#contacto">Contacto</a>
+      <a href="https://wa.me/525541179431?text=Hola%20Kaizen%2C%20quiero%20hacer%20un%20pedido" target="_blank" rel="noopener">WhatsApp 55 4117 9431</a>
     </div>
   </header>
 
   <main id="inicio">
     <section class="hero">
-      <div class="container hero-shell">
-        <div class="hero-copy">
-          <p class="eyebrow">BIENVENIDO A KAIZEN</p>
-          <h1>Sabor que se disfruta en cada bocado</h1>
-          <p class="hero-text">
-            Desayunos, comidas, antojitos, hamburguesas, burritos, bebidas y postres preparados con amor.
-          </p>
-          <div class="hero-actions">
-            <a class="btn btn-dark" href="#menu">Ver menú digital (QR)</a>
-            <a class="btn btn-outline" href="#menu">Promociones</a>
+      <div class="container">
+        <div class="hero-shell">
+          <div class="hero-copy">
+            <p class="eyebrow">Bienvenido a Kaizen</p>
+            <h1>Sabor que se disfruta en cada bocado</h1>
+            <p class="hero-text">
+              Desayunos, comidas, antojitos, hamburguesas, burritos, bebidas y postres preparados con amor.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-solid" href="#menu">Ver menú digital</a>
+              <a class="btn btn-outline" href="#destacados">Promociones</a>
+            </div>
+            <div class="hero-mini">
+              <div><strong>Horario</strong><span>Lunes a Domingo · 09:00 - 17:00</span></div>
+              <div><strong>WhatsApp</strong><span>55 4117 9431</span></div>
+            </div>
           </div>
-          <div class="hero-dots" aria-hidden="true">
-            <span class="dot active"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-          </div>
-        </div>
 
-        <div class="hero-photo" aria-hidden="true">
-          <img src="https://images.unsplash.com/photo-1513442542250-854d436a73f2?auto=format&fit=crop&w=1200&q=80" alt="" />
+          <div class="hero-art" aria-hidden="true">
+            <div class="hero-photo">
+              <img src="assets/hero.jpg" alt="" />
+            </div>
+            <div class="hero-badge hero-badge-top">Menú digital</div>
+            <div class="hero-badge hero-badge-bottom">Tu lugar favorito para comer</div>
+          </div>
         </div>
       </div>
     </section>
 
     <section class="section" id="categorias">
       <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>Categorías</h2>
+            <p>Toque directo a cada parte del menú. En móvil baja a la sección correspondiente y en computadora navega por bloques.</p>
+          </div>
+        </div>
+
         <div class="category-grid">
-          <button class="category-card active" data-filter="desayunos">
-            <span class="category-icon">☀️</span>
-            <span class="category-title">Desayunos</span>
-          </button>
-          <button class="category-card" data-filter="antojitos">
-            <span class="category-icon">🌮</span>
-            <span class="category-title">Antojitos Mexicanos</span>
-          </button>
-          <button class="category-card" data-filter="carnes">
-            <span class="category-icon">🍗</span>
-            <span class="category-title">Carnes y Pollo</span>
-          </button>
-          <button class="category-card" data-filter="tortas">
-            <span class="category-icon">🥪</span>
-            <span class="category-title">Tortas y Burritos</span>
-          </button>
-          <button class="category-card" data-filter="hamburguesas">
-            <span class="category-icon">🍔</span>
-            <span class="category-title">Hamburguesas y Snacks</span>
-          </button>
-          <button class="category-card" data-filter="cafeteria">
-            <span class="category-icon">☕</span>
-            <span class="category-title">Cafetería</span>
-          </button>
-          <button class="category-card" data-filter="bebidas">
-            <span class="category-icon">🥤</span>
-            <span class="category-title">Bebidas Frías</span>
-          </button>
-          <button class="category-card" data-filter="postres">
-            <span class="category-icon">🍰</span>
-            <span class="category-title">Postres</span>
-          </button>
+          <a class="category-tile" href="#desayunos"><span>🥚</span><strong>Desayunos</strong><small>Chilaquiles y huevos</small></a>
+          <a class="category-tile" href="#antojitos"><span>🌮</span><strong>Antojitos Mexicanos</strong><small>Quesadillas y huaraches</small></a>
+          <a class="category-tile" href="#carnes"><span>🍗</span><strong>Carnes y Pollo</strong><small>Asados y más</small></a>
+          <a class="category-tile" href="#tortas"><span>🥪</span><strong>Tortas y Burritos</strong><small>Clásicos de la casa</small></a>
+          <a class="category-tile" href="#hamburguesas"><span>🍔</span><strong>Hamburguesas y Snacks</strong><small>Hot-dogs y papas</small></a>
+          <a class="category-tile" href="#cafeteria"><span>☕</span><strong>Cafetería</strong><small>Café y frapés</small></a>
+          <a class="category-tile" href="#bebidas"><span>🥤</span><strong>Bebidas Frías</strong><small>Smoothies y refrescos</small></a>
+          <a class="category-tile" href="#postres"><span>🍰</span><strong>Postres</strong><small>Algo dulce</small></a>
         </div>
       </div>
     </section>
 
     <section class="section" id="destacados">
-      <div class="container section-head">
-        <div>
-          <h2>Platillos destacados</h2>
-          <p>Bloques visuales tipo catálogo, optimizados para celular y computadora.</p>
+      <div class="container">
+        <div class="section-head section-head-row">
+          <div>
+            <h2>Platillos destacados</h2>
+            <p>Una vista clara y visual, como catálogo, para que el usuario vea lo mejor de la casa al entrar.</p>
+          </div>
+          <a class="text-link" href="#menu">Ver todo →</a>
         </div>
-        <a class="text-link" href="#menu">Ver todo →</a>
-      </div>
 
-      <div class="container featured-grid">
-        <article class="featured-card">
-          <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1200&q=80" alt="Chilaquiles" />
-          <div class="featured-body">
-            <h3>Chilaquiles</h3>
-            <p>Verdes o rojos, con huevo, pollo deshebrado, pechuga o carne asada.</p>
-            <span>Desde $50</span>
-          </div>
-        </article>
-
-        <article class="featured-card">
-          <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=1200&q=80" alt="Hamburguesa" />
-          <div class="featured-body">
-            <h3>Hamburguesas</h3>
-            <p>Clásica, ranch, aztec, doble burger y más.</p>
-            <span>Desde $65</span>
-          </div>
-        </article>
-
-        <article class="featured-card">
-          <img src="https://images.unsplash.com/photo-1502741338009-cac2772e18bc?auto=format&fit=crop&w=1200&q=80" alt="Café" />
-          <div class="featured-body">
-            <h3>Cafecito y algo más</h3>
-            <p>Frappe, smoothies, refrescos, postres y café.</p>
-            <span>Desde $20</span>
-          </div>
-        </article>
+        <div class="highlight-grid">
+          <article class="highlight-card">
+            <img src="assets/desayunos.jpg" alt="Desayunos Kaizen" />
+            <div>
+              <h3>Desayunos</h3>
+              <p>Chilaquiles, molletes y omelette al momento.</p>
+            </div>
+          </article>
+          <article class="highlight-card">
+            <img src="assets/hamburguesas.jpg" alt="Hamburguesas Kaizen" />
+            <div>
+              <h3>Hamburguesas</h3>
+              <p>Clásica, ranch, aztec, kai-burger y más.</p>
+            </div>
+          </article>
+          <article class="highlight-card">
+            <img src="assets/cafeteria.jpg" alt="Cafetería y postres" />
+            <div>
+              <h3>Cafecito y postres</h3>
+              <p>Cappuccino, frappes, cheesecakes y flan.</p>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
 
     <section class="section" id="menu">
-      <div class="container section-head menu-headline">
-        <div>
-          <h2>Menú</h2>
-          <p>Haz clic en una categoría para cambiar el contenido del menú.</p>
-        </div>
-        <div class="menu-tools">
-          <button class="tool-button active" data-filter="all">Ver todo</button>
-          <button class="tool-button" data-filter="desayunos">Desayunos</button>
-          <button class="tool-button" data-filter="antojitos">Antojitos</button>
-          <button class="tool-button" data-filter="tortas">Tortas</button>
-          <button class="tool-button" data-filter="hamburguesas">Hamburguesas</button>
-          <button class="tool-button" data-filter="cafeteria">Cafetería</button>
-          <button class="tool-button" data-filter="bebidas">Bebidas</button>
-          <button class="tool-button" data-filter="postres">Postres</button>
-        </div>
-      </div>
-
       <div class="container">
-        <div id="menuStatus" class="menu-status">Mostrando: todos los artículos</div>
-        <div id="menuGrid" class="menu-grid"></div>
+        <div class="section-head section-head-row">
+          <div>
+            <h2>Menú</h2>
+            <p>Las secciones están conectadas con los botones de categorías. Cada botón baja a su bloque correspondiente.</p>
+          </div>
+          <span class="pill">Menú digital</span>
+        </div>
+
+        <article class="menu-block" id="desayunos">
+          <div class="menu-visual"><img src="assets/desayunos.jpg" alt="Desayunos" /></div>
+          <div class="menu-content">
+            <div class="menu-heading">
+              <p class="menu-kicker">Desayunos</p>
+              <h3>Empieza tu día con nuestros desayunos tradicionales preparados al momento.</h3>
+            </div>
+            <ul class="menu-list">
+              <li><span>Chilaquiles sencillos</span><b>$50</b></li>
+              <li><span>Chilaquiles con huevo</span><b>$60</b></li>
+              <li><span>Chilaquiles con pollo deshebrado</span><b>$70</b></li>
+              <li><span>Chilaquiles con pechuga asada</span><b>$70</b></li>
+              <li><span>Chilaquiles con carne asada</span><b>$70</b></li>
+              <li><span>Molletes sencillos</span><b>$60</b></li>
+              <li><span>Molletes con carne asada</span><b>$90</b></li>
+              <li><span>Omelette de queso</span><b>$50</b></li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="menu-block reverse" id="antojitos">
+          <div class="menu-visual"><img src="assets/antojitos.jpg" alt="Antojitos mexicanos" /></div>
+          <div class="menu-content">
+            <div class="menu-heading">
+              <p class="menu-kicker">Antojitos Mexicanos</p>
+              <h3>Tradición al momento: quesadillas, sopes, gorditas, pambazos y huaraches.</h3>
+            </div>
+            <ul class="menu-list">
+              <li><span>Quesadillas</span><b>$25</b></li>
+              <li><span>Quesadillas con queso</span><b>$30</b></li>
+              <li><span>Pambazo clásico</span><b>$30</b></li>
+              <li><span>Gordita clásica</span><b>$30</b></li>
+              <li><span>Sope clásico</span><b>$30</b></li>
+              <li><span>Sope con bistec</span><b>$70</b></li>
+              <li><span>Huarache sencillo</span><b>$50</b></li>
+              <li><span>Huarache con bistec</span><b>$95</b></li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="menu-block" id="carnes">
+          <div class="menu-visual"><img src="assets/carnes.jpg" alt="Carnes y pollo" /></div>
+          <div class="menu-content">
+            <div class="menu-heading">
+              <p class="menu-kicker">Carnes y Pollo</p>
+              <h3>Pechuga asada, milanesa y opciones al gusto para comida completa.</h3>
+            </div>
+            <ul class="menu-list">
+              <li><span>Pechuga asada con ensalada</span><b>$70</b></li>
+              <li><span>Pechuga asada con papas</span><b>$80</b></li>
+              <li><span>Milanesa con ensalada</span><b>$70</b></li>
+              <li><span>Milanesa con papas</span><b>$80</b></li>
+              <li><span>Carne asada</span><b>$70</b></li>
+              <li><span>Pollo deshebrado</span><b>$70</b></li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="menu-block reverse" id="tortas">
+          <div class="menu-visual"><img src="assets/tortas.jpg" alt="Tortas y burritos" /></div>
+          <div class="menu-content">
+            <div class="menu-heading">
+              <p class="menu-kicker">Tortas y Burritos</p>
+              <h3>Burritos, tortas y combinaciones especiales para un antojo más completo.</h3>
+            </div>
+            <ul class="menu-list">
+              <li><span>Burrito Igor</span><b>$50</b></li>
+              <li><span>Burrito Filemón</span><b>$50</b></li>
+              <li><span>Burrito Politécnico</span><b>$80</b></li>
+              <li><span>Burrito Wurst</span><b>$50</b></li>
+              <li><span>Burrito Toluqueño</span><b>$50</b></li>
+              <li><span>Burrito Platero</span><b>$70</b></li>
+              <li><span>Burrito Tropical</span><b>$70</b></li>
+              <li><span>Burrito Donkey</span><b>$100</b></li>
+              <li><span>Torta de salchicha / jamón / tocino</span><b>$50</b></li>
+              <li><span>Torta de pechuga asada</span><b>$80</b></li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="menu-block" id="hamburguesas">
+          <div class="menu-visual"><img src="assets/hamburguesas.jpg" alt="Hamburguesas y snacks" /></div>
+          <div class="menu-content">
+            <div class="menu-heading">
+              <p class="menu-kicker">Hamburguesas y Snacks</p>
+              <h3>Hot-dogs, sincronizadas, papas y hamburguesas especiales.</h3>
+            </div>
+            <ul class="menu-list">
+              <li><span>Hamburguesa clásica</span><b>$65</b></li>
+              <li><span>Amai Burger</span><b>$90</b></li>
+              <li><span>Ranch Burger</span><b>$90</b></li>
+              <li><span>Suisu Burger</span><b>$90</b></li>
+              <li><span>Philadelphia Burger</span><b>$90</b></li>
+              <li><span>BBQ Kai Burger</span><b>$90</b></li>
+              <li><span>Chipocluda Burger</span><b>$90</b></li>
+              <li><span>Doble Burger</span><b>$120</b></li>
+              <li><span>Hot-dogs / sincronizadas / papas a la francesa</span><b>Desde $50</b></li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="menu-block reverse" id="cafeteria">
+          <div class="menu-visual"><img src="assets/cafeteria.jpg" alt="Cafetería" /></div>
+          <div class="menu-content">
+            <div class="menu-heading">
+              <p class="menu-kicker">Cafetería</p>
+              <h3>Americano, cappuccino, latte, espresso, mocha y más.</h3>
+            </div>
+            <ul class="menu-list">
+              <li><span>Americano</span><b>$25</b></li>
+              <li><span>Cappuccino</span><b>$35</b></li>
+              <li><span>Café con leche</span><b>$35</b></li>
+              <li><span>Latte macciato</span><b>$35</b></li>
+              <li><span>Espresso</span><b>$25</b></li>
+              <li><span>Mocha</span><b>$35</b></li>
+              <li><span>Chocolatl</span><b>$35</b></li>
+              <li><span>Affogatto</span><b>$50</b></li>
+              <li><span>Té</span><b>$20</b></li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="menu-block" id="bebidas">
+          <div class="menu-visual"><img src="assets/cafeteria.jpg" alt="Bebidas frías" /></div>
+          <div class="menu-content">
+            <div class="menu-heading">
+              <p class="menu-kicker">Bebidas Frías</p>
+              <h3>Smoothies, refrescos, agua del día, licuados y frappes.</h3>
+            </div>
+            <ul class="menu-list">
+              <li><span>Smoothie sencillo</span><b>$50</b></li>
+              <li><span>Porción extra de perlas</span><b>$15</b></li>
+              <li><span>Refresco de lata</span><b>$50</b></li>
+              <li><span>Refresco de vidrio</span><b>$15</b></li>
+              <li><span>Agua del día 1 lt</span><b>$30</b></li>
+              <li><span>Frappes</span><b>$50 - $70</b></li>
+              <li><span>Malteadas</span><b>$50</b></li>
+              <li><span>Licuados</span><b>$40</b></li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="menu-block reverse" id="postres">
+          <div class="menu-visual"><img src="assets/cafeteria.jpg" alt="Postres" /></div>
+          <div class="menu-content">
+            <div class="menu-heading">
+              <p class="menu-kicker">Postres</p>
+              <h3>Flan, cheesecake, pastel de zanahoria y pastel Matilda.</h3>
+            </div>
+            <ul class="menu-list">
+              <li><span>Flan napolitano</span><b>$45</b></li>
+              <li><span>Cheesecake de zarzamora</span><b>$45</b></li>
+              <li><span>Cheesecake de chispas</span><b>$45</b></li>
+              <li><span>Pastel de zanahoria</span><b>$45</b></li>
+              <li><span>Pastel Matilda</span><b>$55</b></li>
+            </ul>
+          </div>
+        </article>
       </div>
     </section>
 
-    <section class="section" id="ubicacion">
-      <div class="container section-head">
-        <div>
-          <h2>Ubicación</h2>
-          <p>Mapa incrustado con acceso directo a Google Maps y WhatsApp.</p>
-        </div>
-        <a class="text-link" href="https://maps.app.goo.gl/FhTKa9u3nLnVqfWK8" target="_blank" rel="noopener">Abrir en Maps →</a>
-      </div>
-
-      <div class="container contact-grid">
-        <div class="map-card">
-          <iframe
-            title="Ubicación de Kaizen Restaurante"
-            src="https://www.google.com/maps?q=Kaizen%20Restaurante&output=embed"
-            loading="lazy"
-            allowfullscreen
-            referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <section class="section section-location" id="ubicacion">
+      <div class="container">
+        <div class="section-head section-head-row">
+          <div>
+            <h2>Ubicación y contacto</h2>
+            <p>El mapa va incrustado y el botón de WhatsApp queda listo para pedidos y reservas.</p>
+          </div>
+          <a class="text-link" href="https://maps.app.goo.gl/FhTKa9u3nLnVqfWK8" target="_blank" rel="noopener">Abrir en Maps →</a>
         </div>
 
-        <div class="contact-card" id="contacto">
-          <h3>Kaizen Restaurante</h3>
-          <p>WhatsApp: <a href="https://wa.me/525541179431" target="_blank" rel="noopener">55 4117 9431</a></p>
-          <p>Horario: Lunes a Domingo · 09:00 – 17:00</p>
-          <p>Ubicación: <a href="https://maps.app.goo.gl/FhTKa9u3nLnVqfWK8" target="_blank" rel="noopener">Ver ubicación en Google Maps</a></p>
+        <div class="location-grid">
+          <div class="map-card">
+            <iframe
+              title="Mapa de Kaizen Restaurante"
+              src="https://www.google.com/maps?q=Kaizen%20Restaurante&output=embed"
+              loading="lazy"
+              allowfullscreen
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
 
-          <div class="contact-buttons">
-            <a class="btn btn-dark" href="https://wa.me/525541179431" target="_blank" rel="noopener">Pedir por WhatsApp</a>
-            <a class="btn btn-outline" href="#menu">Ir al menú</a>
+          <div class="contact-card" id="contacto">
+            <p class="menu-kicker">Contacto rápido</p>
+            <h3>Kaizen Restaurante</h3>
+            <div class="contact-item">
+              <span>WhatsApp</span>
+              <a href="https://wa.me/525541179431" target="_blank" rel="noopener">55 4117 9431</a>
+            </div>
+            <div class="contact-item">
+              <span>Ubicación</span>
+              <a href="https://maps.app.goo.gl/FhTKa9u3nLnVqfWK8" target="_blank" rel="noopener">Ver ubicación en Google Maps</a>
+            </div>
+            <div class="contact-item">
+              <span>Horario</span>
+              <strong>Lunes a Domingo · 09:00 - 17:00</strong>
+            </div>
+            <div class="contact-actions">
+              <a class="btn btn-solid" href="https://wa.me/525541179431?text=Hola%20Kaizen%2C%20quiero%20hacer%20un%20pedido" target="_blank" rel="noopener">Pedir por WhatsApp</a>
+              <a class="btn btn-outline" href="#menu">Ver menú completo</a>
+            </div>
           </div>
         </div>
       </div>
     </section>
+
+    <footer class="footer">
+      <div class="container footer-bar">
+        <div>
+          <strong>Kaizen Restaurante</strong>
+          <p>Tu lugar favorito para comer.</p>
+        </div>
+        <a class="btn btn-solid" href="https://wa.me/525541179431" target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+    </footer>
   </main>
 
-  <a class="floating-whatsapp" href="https://wa.me/525541179431" target="_blank" rel="noopener">WhatsApp</a>
+  <a class="floating-whatsapp" href="https://wa.me/525541179431?text=Hola%20Kaizen%2C%20quiero%20hacer%20un%20pedido" target="_blank" rel="noopener">WhatsApp</a>
 
   <script src="script.js"></script>
 </body>
