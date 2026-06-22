@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kaizen Restaurante | Cafecito, antojitos y mucho más</title>
+<meta name="description" content="Kaizen Restaurante: desayunos, chilaquiles, antojitos mexicanos, hamburguesas, tortas, burritos, cafetería, malteadas y más. Ingredientes frescos y recetas caseras. ¡Tu lugar favorito para comer!">
+<meta name="theme-color" content="#2c3520">
+<meta property="og:type" content="restaurant.restaurant">
+<meta property="og:title" content="Kaizen Restaurante">
+<meta property="og:description" content="Comida casera mexicana hecha con pasión. Pide directo por WhatsApp.">
+<meta property="og:locale" content="es_MX">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,500;1,600&family=Poppins:wght@300;400;500;600;700&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
+
+<!-- ====== SEO / Schema.org ====== -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org","@type":"Restaurant",
+  "name":"Kaizen Restaurante",
+  "servesCuisine":["Mexicana","Desayunos","Antojitos","Hamburguesas"],
+  "priceRange":"$$","telephone":"+525541179431",
+  "openingHours":"Mo-Su 09:00-18:00",
+  "slogan":"Tu lugar favorito para comer","acceptsReservations":"True"
+}
+</script>
+
+<style>
+:root{
+  --cream:#f4f0e8; --cream-2:#ece7db; --paper:#fff;
+  --forest:#2c3520; --forest-2:#3a4a2c;
+  --terracotta:#b8472b; --terracotta-2:#9c3a23;
+  --gold:#c69130; --ink:#2a2823; --ink-soft:#5b5749; --line:#e3d8c2;
+  --c-orange:#e0962c; --c-green:#4c7a39; --c-red:#9e3a2c; --c-brown:#8a5a39;
+  --c-espresso:#4a3526; --c-blue:#3a6ea3; --c-burger:#c9622e;
+  --shadow-sm:0 2px 10px rgba(44,53,32,.08); --shadow-md:0 12px 30px rgba(44,53,32,.14);
+  --shadow-lg:0 24px 60px rgba(44,53,32,.20); --radius:18px; --maxw:1200px;
+  --head-h:84px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Poppins',system-ui,sans-serif;color:var(--ink);background:var(--cream);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;border:none;background:none}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
+.text-terra{color:var(--terracotta)}
+.sprig{display:inline-block;vertical-align:middle;color:var(--gold);opacity:.85}
+
+.eyebrow{font-size:.78rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:.7rem}
+.eyebrow::before{content:"";height:1px;width:34px;background:linear-gradient(90deg,transparent,var(--gold))}
+.eyebrow.center{justify-content:center}
+.eyebrow.center::after{content:"";height:1px;width:34px;background:linear-gradient(90deg,var(--gold),transparent)}
+
+.sec-head{text-align:center;max-width:640px;margin:0 auto 26px}
+.sec-head .eyebrow{justify-content:center;margin-bottom:14px}
+.sec-head h2{font-family:'Playfair Display',serif;font-size:clamp(1.9rem,4vw,2.8rem);line-height:1.1;color:var(--forest);font-weight:700}
+.sec-head p{color:var(--ink-soft);margin-top:12px}
+
+/* Botones */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;padding:.85rem 1.5rem;border-radius:12px;font-weight:600;font-size:.95rem;transition:transform .18s,box-shadow .18s,background .18s;white-space:nowrap}
+.btn svg{width:18px;height:18px;flex:none}
+.btn:active{transform:translateY(1px) scale(.99)}
+.btn-terra{background:var(--terracotta);color:#fff;box-shadow:0 8px 20px rgba(184,71,43,.28)}
+.btn-terra:hover{background:var(--terracotta-2);transform:translateY(-2px)}
+.btn-green{background:var(--forest);color:#fff}
+.btn-green:hover{background:var(--forest-2);transform:translateY(-2px)}
+.btn-ghost{background:transparent;color:var(--forest);border:1.5px solid var(--line)}
+.btn-ghost:hover{border-color:var(--forest);background:#fff}
+.btn-ghost-light{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.55)}
+.btn-ghost-light:hover{background:rgba(255,255,255,.12);border-color:#fff}
+
+/* HEADER */
+header{position:sticky;top:0;z-index:60;background:rgba(246,239,225,.92);backdrop-filter:blur(10px);border-bottom:1px solid transparent;transition:.3s}
+header.scrolled{box-shadow:var(--shadow-sm);border-bottom-color:var(--line);background:rgba(246,239,225,.97)}
+.nav{display:flex;align-items:center;gap:18px;height:var(--head-h)}
+.brand{display:flex;align-items:center;gap:14px;flex:none}
+.emblem{width:60px;height:60px;border-radius:50%;border:2px solid var(--forest);display:grid;place-items:center;background:#fff;flex:none;position:relative}
+.emblem::after{content:"";position:absolute;inset:5px;border:1px solid var(--gold);border-radius:50%;opacity:.6}
+.emblem .leaf{width:26px;height:26px;color:var(--c-green)}
+.brand-name{line-height:1}
+.brand-name .b1{font-family:'Playfair Display',serif;font-weight:800;font-size:1.5rem;color:var(--forest);letter-spacing:.04em}
+.brand-name .b2{font-size:.6rem;letter-spacing:.42em;color:var(--terracotta);text-transform:uppercase;margin-top:2px}
+.brand-name .b3{font-family:'Dancing Script',cursive;font-size:.95rem;color:var(--ink-soft);margin-top:1px}
+.nav-links{display:flex;align-items:center;gap:6px;margin-left:auto}
+.nav-links a{padding:.5rem .8rem;border-radius:9px;font-size:.92rem;font-weight:500;color:var(--ink);position:relative;transition:.2s}
+.nav-links a:hover,.nav-links a.active{color:var(--terracotta)}
+.nav-links a.active::after{content:"";position:absolute;left:.8rem;right:.8rem;bottom:.15rem;height:2px;background:var(--terracotta);border-radius:2px}
+.nav-cta{display:flex;align-items:center;gap:10px;margin-left:14px}
+.icon-actions{display:none;align-items:center;gap:4px;margin-left:auto}
+.icon-btn{display:flex;flex-direction:column;align-items:center;gap:3px;color:var(--forest);font-size:.62rem;font-weight:500;padding:4px 7px}
+.icon-btn svg{width:22px;height:22px}
+.burger{width:42px;height:42px;display:none;flex-direction:column;justify-content:center;gap:5px;align-items:center}
+.burger span{width:22px;height:2px;background:var(--forest);border-radius:2px;transition:.3s}
+.burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.burger.open span:nth-child(2){opacity:0}
+.burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.mobile-menu{position:fixed;inset:var(--head-h) 0 0;background:var(--cream);z-index:55;transform:translateX(100%);transition:transform .35s cubic-bezier(.4,0,.2,1);padding:30px 22px;display:flex;flex-direction:column;gap:6px;overflow-y:auto}
+.mobile-menu.open{transform:translateX(0)}
+.mobile-menu a{font-size:1.15rem;font-weight:600;color:var(--forest);padding:14px 8px;border-bottom:1px solid var(--line)}
+.mobile-menu .btn{margin-top:14px}
+
+/* HERO */
+.hero{position:relative;padding:46px 0 70px}
+.hero-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:48px;align-items:center}
+.hero-text .eyebrow{margin-bottom:18px}
+.hero-text h1{font-family:'Playfair Display',serif;font-weight:800;font-size:clamp(2.6rem,5.6vw,4.4rem);line-height:1.02;color:var(--forest)}
+.hero-text .script-line{font-family:'Dancing Script',cursive;font-weight:700;font-size:clamp(1.8rem,3.4vw,2.6rem);color:var(--ink);margin-top:6px}
+.hero-text .lead{font-size:1.05rem;color:var(--ink-soft);margin:20px 0 26px;max-width:480px}
+.hero-cta{display:flex;flex-wrap:wrap;gap:14px}
+.hero-feats{display:flex;flex-wrap:wrap;gap:22px 30px;margin-top:34px}
+.feat{display:flex;align-items:center;gap:10px;font-size:.82rem;font-weight:500;color:var(--ink)}
+.feat .fi{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:#fff;box-shadow:var(--shadow-sm);color:var(--c-green);flex:none}
+.feat .fi svg{width:18px;height:18px}
+.feat small{color:var(--ink-soft);font-size:.78rem;display:block;line-height:1.2}
+.hero-media{position:relative}
+.hero-photo{border-radius:24px;aspect-ratio:5/4;box-shadow:var(--shadow-lg);overflow:hidden;background-size:cover;background-position:center;background-color:#e7d8bb}
+.ph{position:relative;display:grid;place-items:center;overflow:hidden;background:linear-gradient(135deg,#ead9bd 0%,#e3cda6 55%,#d9bf94 100%)}
+.ph::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 32% 26%,rgba(255,255,255,.55),transparent 58%)}
+.ph .em{font-size:3.4rem;filter:drop-shadow(0 6px 10px rgba(0,0,0,.12));z-index:1}
+.hero-photo .em{font-size:6rem}
+.info-card{position:absolute;right:-14px;bottom:34px;background:var(--forest);color:#fff;border-radius:16px;padding:18px 20px;box-shadow:var(--shadow-md);width:max-content;max-width:260px}
+.info-row{display:flex;gap:12px;align-items:flex-start;padding:9px 0}
+.info-row+.info-row{border-top:1px solid rgba(255,255,255,.12)}
+.info-row svg{width:20px;height:20px;color:var(--gold);flex:none;margin-top:2px}
+.info-row b{font-size:.86rem;font-weight:600;display:block}
+.info-row span{font-size:.78rem;opacity:.82;line-height:1.3}
+.info-row a{color:var(--gold);font-size:.78rem;text-decoration:underline}
+.hero-dots{display:none;gap:8px;justify-content:center;margin-top:22px}
+.hero-dots i{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.45)}
+.hero-dots i.on{width:22px;border-radius:4px;background:#fff}
+
+/* Destacados */
+.feature-block{padding:42px 0 50px}
+.dishes-head{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:22px;gap:16px}
+.dishes-head h2{font-family:'Playfair Display',serif;font-size:clamp(1.6rem,3vw,2.2rem);color:var(--forest);display:flex;align-items:center;gap:10px}
+.see-all{color:var(--terracotta);font-weight:600;font-size:.9rem;display:inline-flex;align-items:center;gap:6px;white-space:nowrap;cursor:pointer}
+.see-all svg{width:16px;height:16px;transition:.2s}
+.see-all:hover svg{transform:translateX(4px)}
+.carousel-wrap{position:relative}
+.carousel{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:8px;-webkit-overflow-scrolling:touch}
+.carousel::-webkit-scrollbar{height:0}
+.dish{flex:0 0 230px;scroll-snap-align:start;background:#fff;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-sm);transition:.22s;display:flex;flex-direction:column}
+.dish:hover{transform:translateY(-5px);box-shadow:var(--shadow-md)}
+.dish .pic{aspect-ratio:4/3}
+.dish .pic img{width:100%;height:100%;object-fit:cover}
+.dish .pic .em{font-size:3rem}
+.dish .body{padding:14px 16px 16px;display:flex;flex-direction:column;gap:6px;flex:1}
+.dish h3{font-size:1rem;font-weight:600;color:var(--ink);line-height:1.2}
+.dish .desc{font-size:.8rem;color:var(--ink-soft);flex:1}
+.dish .price-row{display:flex;align-items:center;justify-content:space-between;margin-top:6px}
+.dish .price{font-family:'Playfair Display',serif;font-weight:700;font-size:1.2rem;color:var(--terracotta)}
+.add{width:34px;height:34px;border-radius:50%;background:var(--terracotta);color:#fff;display:grid;place-items:center;transition:.2s;box-shadow:0 4px 12px rgba(184,71,43,.3);flex:none}
+.add:hover{background:var(--terracotta-2);transform:scale(1.1) rotate(90deg)}
+.add svg{width:18px;height:18px}
+.car-btn{position:absolute;top:34%;width:42px;height:42px;border-radius:50%;background:#fff;box-shadow:var(--shadow-md);display:grid;place-items:center;color:var(--forest);z-index:5;transition:.2s}
+.car-btn:hover{background:var(--forest);color:#fff}
+.car-btn svg{width:20px;height:20px}
+.car-prev{left:-14px}.car-next{right:-14px}
+
+/* MENÚ */
+.menu{padding:48px 0 64px;background:var(--cream-2)}
+
+/* Barra de categorías (filtro, fija) */
+.cats{position:sticky;top:var(--head-h);z-index:40;background:var(--cream-2);border-bottom:1px solid var(--line);margin-bottom:30px}
+.cats-strip{position:relative;display:flex;gap:10px;overflow-x:auto;padding:13px 22px;-webkit-overflow-scrolling:touch;max-width:calc(var(--maxw) + 44px);margin:0 auto}
+.cats-strip::-webkit-scrollbar{height:0}
+.cat{flex:0 0 auto;display:flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--line);border-radius:30px;padding:7px 15px 7px 7px;box-shadow:var(--shadow-sm);transition:.2s;cursor:pointer}
+.cat:hover{transform:translateY(-2px)}
+.cat .ci{width:32px;height:32px;border-radius:50%;display:grid;place-items:center;color:#fff;flex:none;font-size:1rem}
+.cat .ct{font-weight:600;font-size:.82rem;color:var(--forest);white-space:nowrap}
+.cat.active{background:var(--forest);border-color:var(--forest)}
+.cat.active .ct{color:#fff}
+
+/* Paneles por categoría */
+.cat-panel{display:none}
+.cat-panel.active{display:block;animation:fadePanel .4s cubic-bezier(.2,.6,.2,1)}
+@keyframes fadePanel{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.mc-head{display:flex;align-items:center;gap:12px;margin-bottom:24px;padding-bottom:14px;border-bottom:2px solid var(--line)}
+.mc-head .badge{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;font-size:1.4rem;color:#fff;flex:none;box-shadow:var(--shadow-sm)}
+.mc-head h3{font-family:'Playfair Display',serif;font-size:clamp(1.5rem,3vw,2.1rem);color:var(--forest);font-weight:700}
+.m-group{margin-bottom:34px}
+.m-group:last-child{margin-bottom:0}
+.m-gtitle{font-family:'Playfair Display',serif;font-weight:700;font-size:1.18rem;color:var(--forest);margin-bottom:16px;display:flex;align-items:center;flex-wrap:wrap;gap:8px}
+.m-gtitle::after{content:"";flex:1;height:2px;background:linear-gradient(90deg,var(--gold),transparent);min-width:30px}
+.m-note{font-family:'Poppins',sans-serif;font-weight:500;font-size:.78rem;color:var(--ink-soft);font-style:italic}
+
+/* Tarjetas de platillo */
+.mgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.mcard{background:#fff;border-radius:16px;overflow:hidden;box-shadow:var(--shadow-sm);display:flex;flex-direction:column;transition:.2s}
+.mcard:hover{transform:translateY(-4px);box-shadow:var(--shadow-md)}
+.mcard-pic{aspect-ratio:4/3;position:relative}
+.mcard-pic img{width:100%;height:100%;object-fit:cover}
+.mcard-pic.ph .em{font-size:2.7rem}
+.mcard-pic.ph::after{content:"Agrega tu foto";position:absolute;left:0;right:0;bottom:8px;text-align:center;font-size:.62rem;letter-spacing:.05em;color:rgba(90,87,73,.65);font-weight:500}
+.mcard-body{padding:11px 13px 13px;display:flex;flex-direction:column;gap:5px;flex:1}
+.mcard h4{font-size:.95rem;font-weight:600;color:var(--ink);line-height:1.22}
+.mcard-desc{font-size:.75rem;color:var(--ink-soft);line-height:1.3;flex:1}
+.mcard-foot{display:flex;align-items:center;justify-content:space-between;margin-top:6px;gap:8px}
+.mcard .price{font-family:'Playfair Display',serif;font-weight:700;font-size:1.12rem;color:var(--terracotta)}
+.mcard .add{width:32px;height:32px;box-shadow:0 3px 10px rgba(184,71,43,.3)}
+.mcard .add svg{width:16px;height:16px}
+.m-pie{margin-top:16px;font-size:.78rem;color:var(--ink-soft);background:#fff;border:1px dashed var(--line);border-radius:10px;padding:9px 13px}
+.m-pie b{color:var(--terracotta)}
+
+/* Confianza */
+.trust{background:var(--cream);padding:34px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.trust-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.trust-item{display:flex;align-items:center;gap:12px;justify-content:center}
+.trust-item .ti{width:42px;height:42px;border-radius:50%;background:#fff;box-shadow:var(--shadow-sm);display:grid;place-items:center;color:var(--c-green);flex:none}
+.trust-item .ti svg{width:22px;height:22px}
+.trust-item b{font-size:.86rem;font-weight:600;color:var(--ink);line-height:1.2}
+
+/* Banner CTA */
+.cta-banner{background:var(--forest);color:#fff;padding:54px 0;text-align:center;position:relative;overflow:hidden}
+.cta-banner .script{font-family:'Dancing Script',cursive;font-weight:700;font-size:clamp(2.2rem,5vw,3.4rem);color:#fff}
+.cta-banner .sub{font-size:.8rem;letter-spacing:.35em;text-transform:uppercase;color:var(--gold);margin-top:8px}
+.cta-banner .btns{display:flex;gap:14px;justify-content:center;margin-top:26px;flex-wrap:wrap}
+.cta-banner .leafy{position:absolute;color:rgba(198,145,48,.18)}
+
+/* Footer */
+footer{background:#23291a;color:#cfc9bb;padding:54px 0 24px;font-size:.9rem}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;margin-bottom:34px}
+.foot-brand .b1{font-family:'Playfair Display',serif;font-weight:800;font-size:1.6rem;color:#fff}
+.foot-brand .script{font-family:'Dancing Script',cursive;color:var(--gold);font-size:1.2rem}
+.foot-brand p{margin-top:12px;max-width:320px;opacity:.8}
+.foot-col h4{color:#fff;font-size:.92rem;font-weight:600;margin-bottom:14px;letter-spacing:.04em}
+.foot-col a,.foot-col p{display:flex;gap:9px;align-items:flex-start;padding:5px 0;opacity:.82;transition:.2s}
+.foot-col a:hover{opacity:1;color:var(--gold)}
+.foot-col svg{width:17px;height:17px;color:var(--gold);flex:none;margin-top:3px}
+.socials{display:flex;gap:10px;margin-top:12px}
+.socials a{width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.08);display:grid;place-items:center;transition:.2s}
+.socials a:hover{background:var(--gold);color:var(--forest)}
+.socials svg{width:18px;height:18px;margin:0}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:20px;text-align:center;font-size:.8rem;opacity:.65}
+
+/* WhatsApp flotante + toast */
+.wa-float{position:fixed;right:20px;bottom:20px;z-index:70;width:58px;height:58px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 8px 24px rgba(37,211,102,.5);transition:.2s;animation:wapulse 2.4s infinite}
+.wa-float:hover{transform:scale(1.08)}
+.wa-float svg{width:30px;height:30px;color:#fff}
+@keyframes wapulse{0%{box-shadow:0 0 0 0 rgba(37,211,102,.5)}70%{box-shadow:0 0 0 16px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}
+.toast{position:fixed;left:50%;bottom:30px;transform:translateX(-50%) translateY(140%);background:var(--forest);color:#fff;padding:14px 22px;border-radius:30px;box-shadow:var(--shadow-lg);z-index:90;display:flex;align-items:center;gap:10px;font-weight:500;font-size:.9rem;transition:transform .4s cubic-bezier(.4,0,.2,1);max-width:90vw}
+.toast.show{transform:translateX(-50%) translateY(0)}
+.toast svg{width:20px;height:20px;color:#25d366;flex:none}
+
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .6s,transform .6s}
+.reveal.in{opacity:1;transform:none}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:1024px){.foot-grid{grid-template-columns:1fr 1fr}.foot-brand{grid-column:1/-1}}
+
+@media(min-width:600px){.mgrid{grid-template-columns:repeat(3,1fr)}}
+@media(min-width:980px){.mgrid{grid-template-columns:repeat(4,1fr);gap:20px}}
+
+@media(max-width:860px){
+  :root{--head-h:72px}
+  .nav-links,.nav-cta{display:none}
+  .icon-actions{display:flex}
+  .burger{display:flex}
+
+  .hero{padding:0 0 8px}
+  .hero-grid{display:block;position:relative}
+  .hero-media{order:-1}
+  .hero-photo{border-radius:0;aspect-ratio:auto;min-height:76vh}
+  .hero-photo{background-color:#2c3520}
+  .hero-photo .em{font-size:5rem;opacity:.5}
+  .info-card,.hero-feats{display:none}
+  .hero-text{position:absolute;inset:0;z-index:3;display:flex;flex-direction:column;justify-content:flex-end;padding:30px 24px 26px;color:#fff}
+  .hero-grid::after{content:"";position:absolute;inset:0;z-index:2;background:linear-gradient(180deg,rgba(20,26,12,.15) 0%,rgba(20,26,12,.35) 45%,rgba(20,26,12,.82) 100%)}
+  .hero-text h1{color:#fff;font-size:clamp(2.2rem,9vw,3rem)}
+  .hero-text .script-line{color:var(--gold)}
+  .hero-text .lead{color:rgba(255,255,255,.9);font-size:.95rem;margin:14px 0 20px;max-width:none}
+  .hero-text .eyebrow{color:var(--gold)}
+  .hero-cta .btn{flex:1;min-width:140px}
+  .hero-cta .btn-terra{background:rgba(255,255,255,.12);border:1.5px solid rgba(255,255,255,.55);box-shadow:none}
+  .hero-cta .btn-terra:hover{background:rgba(255,255,255,.2)}
+  .hero-dots{display:flex}
+
+  .feature-block{padding:30px 0 40px}
+  .trust-grid{grid-template-columns:1fr 1fr;gap:20px 12px}
+  .trust-item{justify-content:flex-start}
+  .car-btn{display:none}
+  .dishes-head h2{font-size:1.45rem}
+}
+
+@media(max-width:560px){
+  .foot-grid{grid-template-columns:1fr}
+  .brand-name .b3{display:none}
+  .emblem{width:48px;height:48px}
+  .brand-name .b1{font-size:1.2rem}
+  .dish{flex-basis:200px}
+}
+
+@media(prefers-reduced-motion:reduce){*{animation:none!important;scroll-behavior:auto!important}.reveal{opacity:1;transform:none;transition:none}}
+</style>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header id="top">
+  <div class="wrap nav">
+    <a href="#top" class="brand" aria-label="Kaizen Restaurante">
+      <span class="emblem"><svg class="leaf" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6"/></svg></span>
+      <span class="brand-name"><span class="b1">KAIZEN</span><span class="b2">Restaurante</span><span class="b3">Tu lugar favorito para comer ♡</span></span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#top" class="active">Inicio</a>
+      <a href="#menu">Menú</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#destacados">Promociones</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-green" id="waTop"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm0 18.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.25-8.23s8.23 3.69 8.23 8.23-3.69 8.24-8.23 8.24zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.85-.86 2.07s.89 2.4 1.01 2.56c.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.11-.22-.17-.47-.29z"/></svg>Pedir por WhatsApp</a>
+      <a class="btn btn-terra" id="reservTop"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>Reservar mesa</a>
+    </div>
+    <div class="icon-actions">
+      <a class="icon-btn" id="waIcon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2z"/></svg>Pedido</a>
+      <button class="icon-btn" id="reservIcon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>Reservar</button>
+      <button class="burger" id="burger" aria-label="Abrir menú"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#top">Inicio</a><a href="#menu">Menú</a><a href="#nosotros">Nosotros</a><a href="#destacados">Promociones</a><a href="#contacto">Contacto</a>
+  <a class="btn btn-terra" id="reservMobile">Reservar mesa</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-text">
+      <div class="eyebrow">♥ &nbsp;Bienvenidos a Kaizen&nbsp; ♥</div>
+      <h1>Cafecito, antojitos<br>y <span class="text-terra">mucho más</span></h1>
+      <div class="script-line">Tradición que se saborea</div>
+      <p class="lead">Desayunos, comidas, hamburguesas, tortas, burritos, bebidas y postres <strong>para todos</strong>.</p>
+      <div class="hero-cta">
+        <a href="#menu" class="btn btn-terra"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>Ver el menú</a>
+        <a class="btn btn-ghost btn-ghost-light" id="mapsHero"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Cómo llegar</a>
+      </div>
+      <div class="hero-feats">
+        <div class="feat"><span class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/></svg></span><span>Ingredientes<br><small>frescos</small></span></div>
+        <div class="feat"><span class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 13.87A4 4 0 0 1 7.41 6a5.11 5.11 0 0 1 1.05-1.54 5 5 0 0 1 7.08 0A5.11 5.11 0 0 1 16.59 6 4 4 0 0 1 18 13.87V21H6Z"/><path d="M6 17h12"/></svg></span><span>Recetas<br><small>caseras</small></span></div>
+        <div class="feat"><span class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></span><span>Ambiente<br><small>familiar</small></span></div>
+        <div class="feat"><span class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 1 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z"/></svg></span><span>Hecho con<br><small>pasión</small></span></div>
+      </div>
+    </div>
+    <div class="hero-media">
+      <!-- 👉 FOTO PRINCIPAL: cambia este <div> por <img class="hero-photo" src="data:image/jpeg;base64,...." alt="Chilaquiles verdes"> -->
+      <div class="hero-photo" id="heroPhoto"></div>
+      <div class="info-card">
+        <div class="info-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><div><b>Abierto</b><span>Lunes a Domingo<br>09:00 – 18:00</span></div></div>
+        <div class="info-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><div><b>Ubícanos</b><a id="mapsCard">Ver en Google Maps</a></div></div>
+        <div class="info-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg><div><b>Tiempo de espera</b><span>10 min aprox.</span></div></div>
+      </div>
+    </div>
+    <div class="hero-dots"><i class="on"></i><i></i><i></i></div>
+  </div>
+</section>
+
+<!-- Destacados -->
+<section class="feature-block" id="destacados">
+  <div class="wrap">
+    <div class="dishes-head reveal">
+      <h2><span class="sprig">🍴</span> Platillos destacados</h2>
+      <a href="#menu" class="see-all">Ver todo el menú <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    </div>
+    <div class="carousel-wrap reveal">
+      <button class="car-btn car-prev" id="carPrev" aria-label="Anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg></button>
+      <div class="carousel" id="carousel"></div>
+      <button class="car-btn car-next" id="carNext" aria-label="Siguiente"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></button>
+    </div>
+  </div>
+</section>
+
+<!-- Menú (tarjetas con filtro por categoría) -->
+<section class="menu" id="menu">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow center">Nuestra carta</div>
+      <h2>El menú completo</h2>
+      <p>Elige una categoría y mira los platillos con foto. Toca <strong>+</strong> para pedir por WhatsApp.</p>
+    </div>
+  </div>
+  <div class="cats"><div class="cats-strip" id="catsStrip"></div></div>
+  <div class="wrap"><div id="menuContainer"></div></div>
+</section>
+
+<!-- CONFIANZA -->
+<section class="trust" id="nosotros">
+  <div class="wrap trust-grid reveal">
+    <div class="trust-item"><span class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2M9 9h.01M15 9h.01"/></svg></span><b>Atención rápida<br>y amable</b></div>
+    <div class="trust-item"><span class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/></svg></span><b>Ingredientes<br>de calidad</b></div>
+    <div class="trust-item"><span class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/></svg></span><b>Ambiente cómodo<br>y familiar</b></div>
+    <div class="trust-item"><span class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><path d="M7 7h.01"/></svg></span><b>Precios justos<br>para todos</b></div>
+  </div>
+</section>
+
+<!-- BANNER CTA -->
+<section class="cta-banner" id="contacto">
+  <svg class="leafy" style="top:18px;left:6%;width:90px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/></svg>
+  <svg class="leafy" style="bottom:18px;right:6%;width:110px;transform:rotate(160deg)" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/></svg>
+  <div class="wrap reveal">
+    <div class="script">Tu lugar favorito para comer</div>
+    <div class="sub">Te esperamos ♥</div>
+    <div class="btns">
+      <a class="btn btn-terra" id="waBanner"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2z"/></svg>Haz tu pedido</a>
+      <a class="btn btn-ghost-light" id="reservBanner">Reservar mesa</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <div class="b1">KAIZEN <span class="script">Restaurante</span></div>
+        <p>Cafecito, antojitos y mucho más. Comida casera mexicana hecha con pasión, en un ambiente cómodo y familiar.</p>
+        <div class="socials">
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></svg></a>
+          <a id="waFooter" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2z"/></svg></a>
+        </div>
+      </div>
+      <div class="foot-col">
+        <h4>Contacto</h4>
+        <a id="waFootLink"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2z"/></svg> WhatsApp · 55 4117 9431</a>
+        <a id="mapsFoot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Ver ubicación en Maps</a>
+        <p><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> Lun a Dom · 09:00 – 18:00</p>
+      </div>
+      <div class="foot-col">
+        <h4>Explora</h4>
+        <a href="#menu">Menú completo</a>
+        <a href="#destacados">Platillos destacados</a>
+        <a href="#nosotros">Por qué elegirnos</a>
+        <a href="#contacto">Reservaciones</a>
+      </div>
+    </div>
+    <div class="foot-bottom">© <span id="year"></span> Kaizen Restaurante · Hecho con ♥ &nbsp;|&nbsp; Tu lugar favorito para comer</div>
+  </div>
+</footer>
+
+<a class="wa-float" id="waFab" aria-label="Pedir por WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm4.52 11.99c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.85-.86 2.07s.89 2.4 1.01 2.56c.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.11-.22-.17-.47-.29z"/></svg></a>
+
+<div class="toast" id="toast"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2z"/></svg><span id="toastText"></span></div>
+
+<script src="js/app.js" defer></script>
+</body>
+</html>
